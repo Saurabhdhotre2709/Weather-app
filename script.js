@@ -113,8 +113,8 @@ function showWeatherData(data) {
                       <div class="day">${window
                         .moment(day.dt * 1000)
                         .format("dddd")}</div>
-                      <div class="temp">Night - ${day.main.temp_min}&#176;C</div>
-                      <div class="temp">Day - ${day.main.temp_max}&#176;C</div>
+                      <div class="temp">Min - ${(day.main.temp_min-273.15).toPrecision(2)}&#176;C</div>
+                      <div class="temp">Max - ${(day.main.temp_max-273.15).toPrecision(2)}&#176;C</div>
                   </div>
                   
                   `;
@@ -127,8 +127,8 @@ function showWeatherData(data) {
                       <img src="http://openweathermap.org/img/wn/${
                         day.weather[0].icon
                       }@2x.png" alt="weather icon" class="w-icon">
-                      <div class="temp">Night - ${day.main.temp_min}&#176;C</div>
-                      <div class="temp">Day - ${day.main.temp_max}&#176;C</div>
+                      <div class="temp">Min - ${(day.main.temp_min-273.15).toPrecision(2)}&#176;C</div>
+                      <div class="temp">Max - ${(day.main.temp_max-273.15).toPrecision(2)}&#176;C</div>
                   </div>
                   
                   `;
